@@ -13,9 +13,6 @@ const renderList = (data, loading = true) => (
     loading={loading}
     size='large'
     pagination={{
-      onChange: (page) => {
-        console.log(page);
-      },
       pageSize: 5,
       showSizeChanger: false,
     }}

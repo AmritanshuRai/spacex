@@ -12,7 +12,6 @@ const Header = () => {
   const { allList } = useSelector((state) => state.allList);
   const [options, setOptions] = useState([]);
 
-  console.log('allList: ', allList);
   const [value, setValue] = useState('');
   const dispatch = useDispatch();
 

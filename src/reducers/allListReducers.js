@@ -9,7 +9,6 @@ export const allListReducer = (state = {}, action) => {
     case FETCH_ALL_LIST_START:
       return { ...state, loading: true };
     case FETCH_ALL_LIST_SUCCESS:
-      console.log('action: ', action);
       return { loading: false, allList: action.payload };
     case FETCH_ALL_LIST_FAILURE:
       return { loading: false, allList: action.payload };

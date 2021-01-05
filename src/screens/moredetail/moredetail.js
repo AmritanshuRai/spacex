@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import './moreDetailsStyle.css'
+import './moreDetailsStyle.css';
 const MoreDetail = ({ history, match }) => {
   const { currentCategory } = useSelector((state) => state.category);
   const { allList } = useSelector((state) => state.allList);
 
   return (
     <section className='MoreDetail'>
-      <Link className='moredetail-link' to='/'>back</Link>
+      <Link className='moredetail-link' to='/'>
+        back
+      </Link>
       {currentCategory === 'news' || !currentCategory
         ? newsDetails(allList, match.params.id)
         : satellitesDetails(allList, match.params.id)}
@@ -18,11 +20,11 @@ const MoreDetail = ({ history, match }) => {
 const newsDetails = (allListData, id) => {
   let data = {};
 
-    if(!allListData){
-    data = getFromStorage()
-  }else{
-       data = allListData.find((item) => id === item.id);
-        saveToStorage(data);
+  if (!allListData) {
+    data = getFromStorage();
+  } else {
+    data = allListData.find((item) => id === item.id);
+    saveToStorage(data);
   }
   return (
     <div className='card'>
@@ -45,15 +47,12 @@ const newsDetails = (allListData, id) => {
 
 const satellitesDetails = (allListData, id) => {
   let data = {};
-  if(!allListData){
-    data = getFromStorage()
-  }else{
-       data = allListData.find((item) => id === item.id);
-        saveToStorage(data);
+  if (!allListData) {
+    data = getFromStorage();
+  } else {
+    data = allListData.find((item) => id === item.id);
+    saveToStorage(data);
   }
-
-
-  console.log('data: ', data);
 
   return (
     <div className='card'>
@@ -79,9 +78,9 @@ const satellitesDetails = (allListData, id) => {
 
 const saveToStorage = (data) => {
   localStorage.setItem('currentList', JSON.stringify(data));
-}
-const getFromStorage = () =>{
+};
+const getFromStorage = () => {
   let retrievedObject = localStorage.getItem('currentList');
-  return JSON.parse(retrievedObject)
-}
+  return JSON.parse(retrievedObject);
+};
 export default MoreDetail;
