@@ -1,0 +1,24 @@
+.homescreen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+/* .homescreen .list {
+  min-height: 90vh;
+  padding-bottom: 40px;
+}
+
+.homescreen .search {
+  display: flex;
+  align-items: center;
+  min-height: 10vh;
+  margin: 0 auto;
+  justify-content: space-around;
+}
+.ant-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */

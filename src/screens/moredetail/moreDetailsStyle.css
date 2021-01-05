@@ -1,0 +1,28 @@
+.MoreDetail{
+  width: 90vw;
+  border-radius: 4px;
+  margin: auto;
+  max-width: 960px;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10vh;
+}
+
+.moredetail-link{
+      border: 1px solid #1890ff;
+    padding: 5px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card p {
+      letter-spacing: 0.5px;
+    text-transform: capitalize;
+    margin: 10px auto;
+}
+.bold {
+      font-weight: 700;
+}
